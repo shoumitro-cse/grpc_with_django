@@ -1,6 +1,4 @@
-
-python3 -m grpc_tools.protoc -I my_proj --python_out=. --grpc_python_out=. my_proj/my_proj.proto
-
-python3 -m grpc_tools.protoc -I my_proj --python_out=. --grpc_python_out=. my_proj/customer.proto
+cd django_grpc
+python3 -m grpc_tools.protoc -I customer_protoc --python_out=. --grpc_python_out=. customer_protoc/customer.proto
 
 

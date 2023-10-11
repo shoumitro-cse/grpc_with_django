@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package customers;
+
+service CustomerService {
+    rpc CreateCustomer (CreateCustomerRequest) returns (Customer);
+    rpc GetCustomer (GetCustomerRequest) returns (Customer);
+    rpc UpdateCustomer (UpdateCustomerRequest) returns (Customer);
+    rpc DeleteCustomer (DeleteCustomerRequest) returns (Empty);
+}
+
+message CreateCustomerRequest {
+    string name = 1;
+    string phone = 2;
+    string address = 3;
+    string email = 4;
+}
+
+message GetCustomerRequest {
+    string customer_id = 1;
+}
+
+message UpdateCustomerRequest {
+    string customer_id = 1;
+    string name = 2;
+    string phone = 3;
+    string address = 4;
+    string email = 5;
+}
+
+message Customer {
+    string customer_id = 1;
+    string name = 2;
+    string phone = 3;
+    string address = 4;
+    string email = 5;
+}
+
+message DeleteCustomerRequest {
+    string customer_id = 1;
+}
+
+message Empty {}
