@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package my_project_pkg;
+
+
+service MyServiceData {
+	// Unary
+	rpc MyUnaryFun (MyRequest) returns (MyReply);
+
+	// Server Streaming
+	rpc MyServerStreamingFun (MyRequest) returns (stream MyReply);
+	
+	// Client Streaming
+	rpc MyClientStreamingFun (stream MyRequest) returns (MyDelayedReply);
+
+	// Both Streaming
+	rpc MyBothStreamingFun (stream MyRequest) returns (stream MyReply);
+}
+
+
+
+// The request message containing the user's name.
+message MyRequest {
+  string name = 1;
+  string email = 2;
+  string address = 3;
+  string image_url = 4;
+  string balance_amount = 5;
+}
+
+// The response message containing the greetings.
+message MyReply {
+  string message = 1;
+}
+
+message MyDelayedReply {
+	string message = 1;
+	repeated MyRequest request = 2;
+}
+
+

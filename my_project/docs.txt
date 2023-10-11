@@ -1,0 +1,8 @@
+# https://www.youtube.com/watch?v=WB37L7PjI5k
+# https://github.com/chelseafarley/PythonGrpc/tree/main
+
+python3 -m grpc_tools.protoc -I my_proj --python_out=. --grpc_python_out=. my_proj/my_proj.proto
+
+
+
+
