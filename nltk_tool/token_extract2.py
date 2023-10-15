@@ -2,52 +2,80 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.probability import FreqDist
+nltk.download('stopwords')
+
 
 # Sample large text (replace this with your actual text)
 large_text = """
-Subject: Staff Meeting Agenda - October 20, 2023
+**Work Note: [Date]**
 
-To: All Employees
-From: [Your Name]
-Date: October 15, 2023
+**To:** [Recipient's Name/Department]
+**From:** [Your Name/Position]
+**Subject:** Work Update and Progress Report
 
-Dear Team,
+---
 
-I hope this message finds you well. We will be having our monthly staff meeting on October 20, 2023, at 2:00 PM in the conference room. Please find the agenda for the meeting below:
+**I. Introduction:**
 
-Agenda:
+I hope this note finds you in good health and high spirits. This work note aims to provide a comprehensive overview of the progress made, challenges faced, and future plans in our ongoing projects and tasks. Your attention to the following points is highly appreciated.
 
-1. Welcome and Introduction (5 minutes)
-   - Brief welcome and introduction of any new team members.
+---
 
-2. Project Updates (15 minutes)
-   - Team leads to provide updates on ongoing projects.
+**II. Project Updates:**
 
-3. Financial Report (10 minutes)
-   - Presentation of the latest financial performance and budget updates.
+1. **Project Name/Number:** [Project Name/Number]
+   - **Progress:** [Brief overview of the project's current status, including milestones achieved and tasks completed.]
+   - **Challenges:** [Outline any challenges faced, such as resource constraints, technical difficulties, or external factors.]
 
-4. Employee Recognition (5 minutes)
-   - Recognizing outstanding contributions and achievements by team members.
+2. **Project Name/Number:** [Project Name/Number]
+   - **Progress:** [Brief overview of the project's current status, including milestones achieved and tasks completed.]
+   - **Challenges:** [Outline any challenges faced, such as resource constraints, technical difficulties, or external factors.]
 
-5. New Policies and Procedures (10 minutes)
-   - Discussion of any new company policies or changes in procedures.
+[Continue this section for all ongoing projects, providing concise updates and challenges.]
 
-6. Open Floor (15 minutes)
-   - An opportunity for team members to raise questions, concerns, or suggestions.
+---
 
-7. Upcoming Events and Announcements (5 minutes)
-   - Information on upcoming company events and important announcements.
+**III. Task Accomplishments:**
 
-8. Adjournment (2 minutes)
+- [List down specific tasks completed since the last work note. Include any notable achievements or improvements.]
 
-If you have any additional items you would like to include in the agenda, please email me by October 18, 2023.
+---
 
-Your presence and participation in this meeting are highly encouraged, as it is a great opportunity to stay informed and involved in the company's activities.
+**IV. Upcoming Tasks:**
 
-Thank you, and I look forward to seeing you all on October 20th.
+- [Enumerate tasks that are planned for the upcoming period. Include deadlines, responsibilities, and any dependencies.]
 
-Best regards,
-[Your Name]
+---
+
+**V. Issues and Concerns:**
+
+- **Issues Raised:** [List any issues that have been raised during the reporting period. Provide a brief description of each issue.]
+- **Proposed Solutions:** [Suggest potential solutions or actions that can be taken to address the raised issues.]
+
+---
+
+**VI. Team Update:**
+
+- **New Team Members:** [List any new team members who joined during the reporting period. Provide a brief introduction.]
+- **Team Challenges:** [Highlight any challenges faced by the team as a whole. These might include communication issues, collaboration problems, or workload concerns.]
+- **Recognition and Appreciation:** [Acknowledge outstanding contributions made by team members. This fosters a positive work environment.]
+
+---
+
+**VII. Conclusion:**
+
+In conclusion, the team has been working diligently to meet our project goals. Despite challenges faced, we are confident in our ability to overcome them and achieve successful outcomes. Your support and understanding are invaluable in this process. If you have any questions or require further details on any of the points mentioned in this work note, please do not hesitate to contact me.
+
+Thank you for your time and consideration.
+
+Warm regards,
+
+[Your Full Name]
+[Your Position]
+[Your Email Address]
+[Your Phone Number]
+[Organization Name]
+
 """
 # Tokenize the text into words
 words = word_tokenize(large_text)
