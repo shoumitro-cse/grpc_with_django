@@ -1,5 +1,7 @@
 import nltk
 
+nltk.download('punkt')
+
 # Sample text (replace this with your actual text)
 text = """
 **Work Note: [Date]**
